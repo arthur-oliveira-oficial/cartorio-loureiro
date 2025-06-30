@@ -1,0 +1,323 @@
+/* Estilos específicos da página Serviços Online */
+
+/* Cards de Benefícios */
+.beneficio-card {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-md);
+}
+
+.beneficio-card__icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--cor-botao), var(--cor-botao-hover));
+  border-radius: 50%;
+  color: var(--cor-fundo-principal);
+  margin: 0 auto;
+  box-shadow: 0 6px 20px rgba(227, 169, 54, 0.3);
+}
+
+.beneficio-card__titulo {
+  color: var(--cor-texto-principal);
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.beneficio-card__descricao {
+  color: var(--cor-texto-secundario);
+  line-height: 1.5;
+  margin: 0;
+  font-size: var(--tamanho-texto-pequeno);
+}
+
+/* Categorias de Serviços */
+.servicos-categorias {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-xxl);
+}
+
+.categoria-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-xl);
+}
+
+.categoria-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.categoria-titulo {
+  color: var(--cor-texto-principal);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 var(--espacamento-md);
+  position: relative;
+}
+
+.categoria-titulo::after {
+  content: "";
+  position: absolute;
+  bottom: -var(--espacamento-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--cor-botao),
+    transparent
+  );
+}
+
+.categoria-descricao {
+  color: var(--cor-texto-secundario);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Grid de Serviços */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--espacamento-lg);
+}
+
+/* Cards de Serviço Online */
+.servico-online-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.servico-online-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cor-botao), var(--cor-botao-hover));
+  transform: translateX(-100%);
+  transition: var(--transicao-padrao);
+}
+
+.servico-online-card:hover::before {
+  transform: translateX(0);
+}
+
+.servico-online-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-md);
+}
+
+.servico-online-card__icone {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    135deg,
+    rgba(227, 169, 54, 0.1),
+    rgba(227, 169, 54, 0.2)
+  );
+  border-radius: 12px;
+  border: 2px solid var(--cor-botao);
+}
+
+.servico-online-card__titulo {
+  color: var(--cor-texto-principal);
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.servico-online-card__descricao {
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.servico-online-card__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacamento-sm);
+  margin-top: auto;
+}
+
+/* Observações */
+.observacoes-card {
+  text-align: center;
+}
+
+.observacoes-card h2 {
+  color: var(--cor-texto-principal);
+  margin-bottom: var(--espacamento-xl);
+}
+
+.observacoes-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--espacamento-xl);
+  text-align: left;
+}
+
+.observacao-item {
+  display: flex;
+  gap: var(--espacamento-lg);
+  align-items: flex-start;
+}
+
+.observacao-icone {
+  color: var(--cor-botao);
+  flex-shrink: 0;
+  margin-top: var(--espacamento-xs);
+  background: rgba(227, 169, 54, 0.1);
+  padding: var(--espacamento-sm);
+  border-radius: 50%;
+}
+
+.observacao-item h4 {
+  color: var(--cor-texto-principal);
+  margin: 0 0 var(--espacamento-sm);
+  font-size: 1.1rem;
+}
+
+.observacao-item p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  margin: 0;
+  font-size: var(--tamanho-texto-pequeno);
+}
+
+/* Call to Action */
+.cta-section {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-lg);
+}
+
+.cta-section h2 {
+  color: var(--cor-texto-principal);
+  margin: 0;
+}
+
+.cta-section p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--espacamento-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .observacoes-lista {
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-lg);
+  }
+
+  .observacao-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--espacamento-md);
+  }
+
+  .categoria-titulo {
+    font-size: 1.5rem;
+  }
+
+  .categoria-descricao {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .botao {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .servico-online-card__header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--espacamento-sm);
+  }
+
+  .servico-online-card__icone {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .beneficio-card__icone {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Animações */
+.servico-online-card {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.servico-online-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.servico-online-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.servico-online-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.observacao-item {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.observacao-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.observacao-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.observacao-item:nth-child(3) {
+  animation-delay: 0.5s;
+}

@@ -1,0 +1,367 @@
+.escrituras-page {
+  min-height: 100vh;
+}
+
+.escrituras-hero {
+  background: linear-gradient(
+    135deg,
+    var(--cor-primaria),
+    var(--cor-secundaria)
+  );
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-icon {
+  font-size: 2.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.escrituras-tipos {
+  padding: 4rem 0;
+  background: var(--cor-background);
+}
+
+.escrituras-tipos h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--cor-primaria);
+  margin-bottom: 3rem;
+}
+
+.tipos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.tipo-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid var(--cor-primaria);
+}
+
+.tipo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tipo-icon {
+  font-size: 3rem;
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+}
+
+.tipo-card h3 {
+  font-size: 1.4rem;
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+}
+
+.tipo-card p {
+  color: var(--cor-texto-secundario);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.detalhes-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.detalhes-lista li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--cor-texto);
+}
+
+.detalhes-lista li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--cor-sucesso);
+  font-weight: bold;
+}
+
+.escrituras-processo {
+  padding: 4rem 0;
+  background: white;
+}
+
+.escrituras-processo h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--cor-primaria);
+  margin-bottom: 3rem;
+}
+
+.processo-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.processo-timeline::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--cor-primaria);
+}
+
+.processo-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.processo-numero {
+  width: 60px;
+  height: 60px;
+  background: var(--cor-primaria);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.processo-content h3 {
+  font-size: 1.3rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+}
+
+.processo-content p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+}
+
+.escrituras-documentos {
+  padding: 4rem 0;
+  background: var(--cor-background);
+}
+
+.documentos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.documentos-content h2 {
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-icon {
+  font-size: 1.5rem;
+}
+
+.documentos-lista {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.documentos-lista li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: var(--cor-texto);
+  border-bottom: 1px solid #eee;
+}
+
+.documentos-lista li::before {
+  content: "📄";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.documentos-observacao {
+  background: #e8f4f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--cor-primaria);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.documentos-observacao .info-icon {
+  color: var(--cor-primaria);
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.documentos-observacao p strong {
+  color: var(--cor-primaria);
+}
+
+.documentos-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.info-card .info-icon {
+  font-size: 2.5rem;
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+}
+
+.escrituras-cta {
+  padding: 4rem 0;
+  background: linear-gradient(
+    135deg,
+    var(--cor-primaria),
+    var(--cor-secundaria)
+  );
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: white;
+  color: var(--cor-primaria);
+}
+
+.btn-primary:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--cor-primaria);
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-icon {
+    font-size: 2rem;
+  }
+
+  .tipos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .documentos-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .processo-timeline::before {
+    left: 15px;
+  }
+
+  .processo-numero {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    min-width: 200px;
+  }
+}
