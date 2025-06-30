@@ -1,0 +1,31 @@
+.testamentos-page .testamentos-hero {
+  background: linear-gradient(
+    135deg,
+    var(--cor-primaria),
+    var(--cor-secundaria)
+  );
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.testamentos-page .hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.testamentos-page .hero-icon {
+  font-size: 2.5rem;
+}
+
+.testamentos-page .hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}

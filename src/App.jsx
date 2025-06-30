@@ -8,6 +8,10 @@ import Servicos from './paginas/Servicos';
 import ServicosOnline from './paginas/ServicosOnline';
 import DuvidasFrequentes from './paginas/DuvidasFrequentes';
 import Contato from './paginas/Contato';
+import Escrituras from './paginas/servicos/Escrituras';
+import Procuracoes from './paginas/servicos/Procuracoes';
+import Testamentos from './paginas/servicos/Testamentos';
+import Apostilamento from './paginas/servicos/Apostilamento';
 import './App.css';
 
 function App() {
@@ -20,11 +24,15 @@ function App() {
               <Route index element={<Inicio />} />
               <Route path="cartorio" element={<Cartorio />} />
               <Route path="servicos" element={<Servicos />} />
+              <Route path="servicos/escrituras" element={<Escrituras />} />
+              <Route path="servicos/procuracoes" element={<Procuracoes />} />
+              <Route path="servicos/testamentos" element={<Testamentos />} />
+              <Route path="servicos/apostilamento" element={<Apostilamento />} />
               <Route path="servicos-online" element={<ServicosOnline />} />
               <Route path="duvidas" element={<DuvidasFrequentes />} />
               <Route path="contato" element={<Contato />} />
 
-              {/* Páginas de serviços específicos (serão criadas posteriormente) */}
+              {/* Rota genérica para outros serviços (pode ser removida ou ajustada) */}
               <Route path="servicos/*" element={<Servicos />} />
 
               {/* Páginas adicionais (placeholders por enquanto) */}
