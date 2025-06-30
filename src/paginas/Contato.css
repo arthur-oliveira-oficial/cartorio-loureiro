@@ -1,0 +1,242 @@
+/* Estilos específicos da página Contato */
+
+/* Informações de Contato */
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-xl);
+}
+
+.contato-info h2 {
+  color: var(--cor-texto-principal);
+  margin-bottom: var(--espacamento-md);
+}
+
+.contato-info__descricao {
+  color: var(--cor-texto-secundario);
+  line-height: 1.7;
+  margin-bottom: var(--espacamento-lg);
+}
+
+.contato-info__lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-xl);
+}
+
+.contato-info__item {
+  display: flex;
+  gap: var(--espacamento-lg);
+  align-items: flex-start;
+}
+
+.contato-info__icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--cor-botao), var(--cor-botao-hover));
+  border-radius: 12px;
+  color: var(--cor-fundo-principal);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(227, 169, 54, 0.3);
+}
+
+.contato-info__detalhes h4 {
+  color: var(--cor-texto-principal);
+  margin: 0 0 var(--espacamento-sm);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.contato-info__detalhes p {
+  color: var(--cor-texto-secundario);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contato-info__detalhes a {
+  color: var(--cor-botao);
+  text-decoration: none;
+  transition: var(--transicao-padrao);
+}
+
+.contato-info__detalhes a:hover {
+  color: var(--cor-botao-hover);
+  text-decoration: underline;
+}
+
+/* Observações */
+.contato-info__observacoes {
+  padding: var(--espacamento-lg);
+  background-color: var(--cor-fundo-card);
+  border-radius: 12px;
+  border-left: 4px solid var(--cor-botao);
+}
+
+.contato-info__observacoes h4 {
+  color: var(--cor-texto-principal);
+  margin: 0 0 var(--espacamento-md);
+  font-size: 1rem;
+}
+
+.contato-info__observacoes ul {
+  margin: 0;
+  padding-left: var(--espacamento-lg);
+  color: var(--cor-texto-secundario);
+}
+
+.contato-info__observacoes li {
+  margin-bottom: var(--espacamento-sm);
+  line-height: 1.5;
+}
+
+/* Formulário de Contato */
+.contato-formulario .card {
+  height: 100%;
+}
+
+.contato-formulario h2 {
+  color: var(--cor-texto-principal);
+  margin-bottom: var(--espacamento-md);
+}
+
+.contato-formulario p {
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--espacamento-xl);
+  line-height: 1.6;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-lg);
+}
+
+.formulario__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-sm);
+}
+
+.formulario__label {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-sm);
+  color: var(--cor-texto-principal);
+  font-weight: 500;
+  font-size: var(--tamanho-texto-pequeno);
+}
+
+.input--erro,
+.textarea--erro,
+.select--erro {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.formulario__erro {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: var(--espacamento-xs);
+}
+
+.botao--full {
+  width: 100%;
+  justify-content: center;
+  padding: var(--espacamento-lg);
+  font-size: 1.1rem;
+}
+
+.botao:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.botao:disabled:hover {
+  transform: none;
+  box-shadow: var(--sombra-botao);
+}
+
+/* Observação do formulário */
+.formulario__observacao {
+  margin-top: var(--espacamento-lg);
+  padding: var(--espacamento-md);
+  background-color: rgba(227, 169, 54, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid var(--cor-botao);
+}
+
+.formulario__observacao p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.5;
+}
+
+.formulario__observacao strong {
+  color: var(--cor-texto-principal);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contato-info__item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--espacamento-md);
+  }
+
+  .contato-info__icone {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+  }
+
+  .contato-info__observacoes {
+    padding: var(--espacamento-md);
+  }
+
+  .formulario {
+    gap: var(--espacamento-md);
+  }
+}
+
+/* Animações do formulário */
+.formulario__grupo {
+  animation: slideInUp 0.5s ease-out;
+}
+
+.formulario__grupo:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.formulario__grupo:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.formulario__grupo:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.formulario__grupo:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.formulario__grupo:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.formulario__grupo:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Estados de foco melhorados */
+.input:focus,
+.textarea:focus,
+.select:focus {
+  transform: translateY(-2px);
+}
+
+/* Transições suaves para validação */
+.input,
+.textarea,
+.select {
+  transition: all 0.3s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}

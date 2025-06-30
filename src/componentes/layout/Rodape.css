@@ -1,0 +1,314 @@
+/* Estilos do Rodapé */
+.rodape {
+  background-color: var(--cor-fundo-principal);
+  border-top: 1px solid var(--cor-borda-card);
+  margin-top: auto;
+}
+
+.rodape__principal {
+  padding: var(--espacamento-xxl) 0 var(--espacamento-xl);
+}
+
+.rodape__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--espacamento-xl);
+  margin-bottom: var(--espacamento-xl);
+}
+
+.rodape__coluna {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-md);
+}
+
+/* Logo do rodapé */
+.rodape__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-md);
+  margin-bottom: var(--espacamento-md);
+}
+
+.rodape__logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.rodape__logo-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.rodape__titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-texto-principal);
+  margin: 0 0 var(--espacamento-xs);
+  line-height: 1.2;
+}
+
+.rodape__subtitulo {
+  font-size: 0.85rem;
+  color: var(--cor-texto-secundario);
+  font-weight: 400;
+}
+
+.rodape__coluna-titulo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cor-texto-principal);
+  margin: 0 0 var(--espacamento-md);
+  border-bottom: 2px solid var(--cor-botao);
+  padding-bottom: var(--espacamento-sm);
+}
+
+/* Informações institucionais */
+.rodape__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-xs);
+  margin-bottom: var(--espacamento-md);
+}
+
+.rodape__cnpj,
+.rodape__cns {
+  font-size: var(--tamanho-texto-pequeno);
+  color: var(--cor-texto-secundario);
+  margin: 0;
+}
+
+.rodape__responsaveis {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-xs);
+}
+
+.rodape__responsaveis p {
+  font-size: var(--tamanho-texto-pequeno);
+  color: var(--cor-texto-secundario);
+  margin: 0;
+}
+
+.rodape__responsaveis strong {
+  color: var(--cor-texto-principal);
+}
+
+/* Contatos */
+.rodape__contatos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-md);
+}
+
+.rodape__contato-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espacamento-md);
+}
+
+.rodape__icone {
+  color: var(--cor-botao);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.rodape__contato-item p {
+  margin: 0;
+  font-size: var(--tamanho-texto-pequeno);
+  color: var(--cor-texto-secundario);
+  line-height: 1.4;
+}
+
+.rodape__contato-item a {
+  color: var(--cor-texto-secundario);
+  text-decoration: none;
+  font-size: var(--tamanho-texto-pequeno);
+  transition: var(--transicao-padrao);
+}
+
+.rodape__contato-item a:hover {
+  color: var(--cor-botao);
+  text-decoration: none;
+}
+
+/* Listas de links */
+.rodape__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-sm);
+}
+
+.rodape__lista li {
+  position: relative;
+  padding-left: var(--espacamento-md);
+}
+
+.rodape__lista li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--cor-botao);
+  font-weight: bold;
+  transition: var(--transicao-padrao);
+}
+
+.rodape__lista li:hover::before {
+  transform: translateX(4px);
+}
+
+.rodape__link {
+  color: var(--cor-texto-secundario);
+  text-decoration: none;
+  font-size: var(--tamanho-texto-pequeno);
+  transition: var(--transicao-padrao);
+  display: block;
+  padding: var(--espacamento-xs) 0;
+  line-height: 1.4;
+}
+
+.rodape__link:hover {
+  color: var(--cor-botao);
+  text-decoration: none;
+  padding-left: var(--espacamento-sm);
+}
+
+.rodape__link--externo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-xs);
+}
+
+/* Divisor */
+.rodape__divisor {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--cor-borda-card) 20%,
+    var(--cor-borda-card) 80%,
+    transparent
+  );
+  margin: var(--espacamento-xl) 0;
+}
+
+/* Rodapé inferior */
+.rodape__inferior {
+  padding: var(--espacamento-lg) 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.rodape__inferior-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--espacamento-md);
+}
+
+.rodape__copyright {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-xs);
+}
+
+.rodape__copyright p {
+  margin: 0;
+  font-size: var(--tamanho-texto-pequeno);
+  color: var(--cor-texto-secundario);
+}
+
+.rodape__disclaimer {
+  font-size: 0.75rem !important;
+  opacity: 0.8;
+}
+
+/* Redes sociais */
+.rodape__redes-sociais {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-md);
+  font-size: var(--tamanho-texto-pequeno);
+  color: var(--cor-texto-secundario);
+}
+
+.rodape__redes-links {
+  display: flex;
+  gap: var(--espacamento-md);
+}
+
+.rodape__rede-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--cor-fundo-card);
+  color: var(--cor-texto-secundario);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: var(--transicao-padrao);
+}
+
+.rodape__rede-social:hover {
+  background-color: var(--cor-botao);
+  color: var(--cor-fundo-principal);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .rodape__grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--espacamento-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .rodape__principal {
+    padding: var(--espacamento-xl) 0 var(--espacamento-lg);
+  }
+
+  .rodape__grid {
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-xl);
+  }
+
+  .rodape__inferior-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rodape__copyright {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .rodape__logo {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--espacamento-sm);
+  }
+
+  .rodape__logo-img {
+    height: 50px;
+  }
+
+  .rodape__contato-item {
+    flex-direction: column;
+    gap: var(--espacamento-sm);
+    text-align: center;
+  }
+
+  .rodape__redes-sociais {
+    flex-direction: column;
+    gap: var(--espacamento-sm);
+  }
+}

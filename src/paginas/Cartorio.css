@@ -1,0 +1,274 @@
+/* Estilos específicos da página Cartório */
+
+.cartorio .historia-texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-lg);
+}
+
+.cartorio .historia-texto h2 {
+  color: var(--cor-texto-principal);
+  margin-bottom: var(--espacamento-md);
+}
+
+.cartorio .historia-texto p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Dados institucionais */
+.historia-dados .card {
+  height: 100%;
+}
+
+.dados-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-md);
+}
+
+.dado-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-xs);
+  padding: var(--espacamento-md);
+  background-color: rgba(227, 169, 54, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid var(--cor-botao);
+}
+
+.dado-item strong {
+  color: var(--cor-texto-principal);
+  font-size: var(--tamanho-texto-pequeno);
+  font-weight: 600;
+}
+
+.dado-item span {
+  color: var(--cor-texto-secundario);
+  font-size: var(--tamanho-texto-pequeno);
+  line-height: 1.4;
+}
+
+/* Cards da equipe */
+.equipe-card {
+  text-align: center;
+}
+
+.equipe-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacamento-md);
+  margin-bottom: var(--espacamento-lg);
+}
+
+.equipe-card__icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--cor-botao), var(--cor-botao-hover));
+  border-radius: 50%;
+  color: var(--cor-fundo-principal);
+  box-shadow: 0 6px 20px rgba(227, 169, 54, 0.3);
+}
+
+.equipe-card__header h3 {
+  color: var(--cor-texto-principal);
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.equipe-card__content h4 {
+  color: var(--cor-botao);
+  margin: 0 0 var(--espacamento-md);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.equipe-card__content p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Cards de valores */
+.valor-card {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-md);
+}
+
+.valor-card__icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--cor-botao), var(--cor-botao-hover));
+  border-radius: 12px;
+  color: var(--cor-fundo-principal);
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(227, 169, 54, 0.3);
+}
+
+.valor-card__titulo {
+  color: var(--cor-texto-principal);
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.valor-card__descricao {
+  color: var(--cor-texto-secundario);
+  line-height: 1.5;
+  margin: 0;
+  font-size: var(--tamanho-texto-pequeno);
+  flex: 1;
+}
+
+/* Diferenciais */
+.diferenciais-lista ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-lg);
+}
+
+.diferencial-item {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-md);
+  padding: var(--espacamento-md);
+  background-color: var(--cor-fundo-card);
+  border-radius: 8px;
+  border-left: 4px solid var(--cor-botao);
+  transition: var(--transicao-padrao);
+}
+
+.diferencial-item:hover {
+  transform: translateX(8px);
+  box-shadow: var(--sombra-card);
+}
+
+.diferencial-icone {
+  color: var(--cor-botao);
+  flex-shrink: 0;
+}
+
+.diferencial-item span {
+  color: var(--cor-texto-secundario);
+  font-weight: 500;
+}
+
+.diferenciais-texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-lg);
+  justify-content: center;
+}
+
+.diferenciais-texto h3 {
+  color: var(--cor-texto-principal);
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.diferenciais-texto p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.7;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Localização */
+.localizacao-info {
+  margin-bottom: var(--espacamento-xl);
+}
+
+.localizacao-info h3 {
+  color: var(--cor-texto-principal);
+  margin-bottom: var(--espacamento-lg);
+}
+
+.localizacao-info p {
+  color: var(--cor-texto-secundario);
+  margin: var(--espacamento-sm) 0;
+  font-size: var(--tamanho-texto);
+}
+
+.localizacao-info strong {
+  color: var(--cor-texto-principal);
+}
+
+.mapa-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espacamento-md);
+  padding: var(--espacamento-xxl);
+  background: linear-gradient(
+    135deg,
+    var(--cor-fundo-card) 0%,
+    rgba(227, 169, 54, 0.1) 100%
+  );
+  border-radius: 12px;
+  border: 2px dashed var(--cor-borda-card);
+  text-align: center;
+}
+
+.mapa-placeholder svg {
+  color: var(--cor-botao);
+  opacity: 0.7;
+}
+
+.mapa-placeholder p {
+  color: var(--cor-texto-secundario);
+  margin: 0;
+  font-size: var(--tamanho-texto-pequeno);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .dados-grid {
+    gap: var(--espacamento-sm);
+  }
+
+  .dado-item {
+    padding: var(--espacamento-sm);
+  }
+
+  .equipe-card__icone {
+    width: 60px;
+    height: 60px;
+  }
+
+  .valor-card__icone {
+    width: 50px;
+    height: 50px;
+  }
+
+  .diferencial-item {
+    padding: var(--espacamento-sm);
+  }
+
+  .diferencial-item:hover {
+    transform: none;
+  }
+
+  .mapa-placeholder {
+    padding: var(--espacamento-xl);
+  }
+
+  .mapa-placeholder svg {
+    width: 40px;
+    height: 40px;
+  }
+}

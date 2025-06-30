@@ -1,0 +1,242 @@
+/* Estilos específicos da página Início */
+
+/* Serviços Online */
+.servicos-online {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--espacamento-lg);
+  margin-bottom: var(--espacamento-xl);
+}
+
+.servico-online {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--espacamento-lg);
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda-card);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: var(--transicao-padrao);
+  color: var(--cor-texto-secundario);
+}
+
+.servico-online:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-card);
+  border-color: var(--cor-botao);
+  text-decoration: none;
+  color: var(--cor-botao);
+}
+
+.servico-online__nome {
+  font-weight: 500;
+  font-size: var(--tamanho-texto);
+}
+
+.servico-online__icone {
+  color: var(--cor-botao);
+  transition: var(--transicao-padrao);
+}
+
+.servico-online:hover .servico-online__icone {
+  transform: translate(4px, -4px);
+}
+
+/* Cards de Informação */
+.info-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-lg);
+}
+
+.info-card__titulo {
+  color: var(--cor-texto-principal);
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.info-card__texto {
+  color: var(--cor-texto-secundario);
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.info-card__dados {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-sm);
+  padding: var(--espacamento-md);
+  background-color: rgba(227, 169, 54, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid var(--cor-botao);
+}
+
+.info-card__dado {
+  font-size: var(--tamanho-texto-pequeno);
+  color: var(--cor-texto-secundario);
+}
+
+.info-card__dado strong {
+  color: var(--cor-texto-principal);
+}
+
+/* Contato Rápido */
+.contato-rapido {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-lg);
+  margin-bottom: var(--espacamento-lg);
+}
+
+.contato-rapido__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espacamento-md);
+}
+
+.contato-rapido__icone {
+  color: var(--cor-botao);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contato-rapido__item div {
+  color: var(--cor-texto-secundario);
+  font-size: var(--tamanho-texto-pequeno);
+  line-height: 1.5;
+}
+
+.contato-rapido__item strong {
+  color: var(--cor-texto-principal);
+}
+
+.contato-rapido__item a {
+  color: var(--cor-botao);
+  text-decoration: none;
+  transition: var(--transicao-padrao);
+}
+
+.contato-rapido__item a:hover {
+  color: var(--cor-botao-hover);
+  text-decoration: underline;
+}
+
+/* Cards de Notícia */
+.noticia-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.noticia-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cor-botao), var(--cor-botao-hover));
+}
+
+.noticia-card__titulo {
+  color: var(--cor-texto-principal);
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.noticia-card__resumo {
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+  font-size: var(--tamanho-texto-pequeno);
+}
+
+.noticia-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: var(--espacamento-md);
+  border-top: 1px solid var(--cor-borda-card);
+}
+
+.noticia-card__data {
+  font-size: 0.8rem;
+  color: var(--cor-texto-secundario);
+  opacity: 0.8;
+}
+
+.noticia-card__link {
+  color: var(--cor-botao);
+  font-weight: 500;
+  font-size: var(--tamanho-texto-pequeno);
+  text-decoration: none;
+  transition: var(--transicao-padrao);
+  position: relative;
+}
+
+.noticia-card__link::after {
+  content: " →";
+  transition: var(--transicao-padrao);
+}
+
+.noticia-card__link:hover {
+  color: var(--cor-botao-hover);
+  text-decoration: none;
+}
+
+.noticia-card__link:hover::after {
+  transform: translateX(4px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .servicos-online {
+    grid-template-columns: 1fr;
+  }
+
+  .servico-online {
+    padding: var(--espacamento-md);
+  }
+
+  .servico-online__nome {
+    font-size: var(--tamanho-texto-pequeno);
+  }
+
+  .contato-rapido__item {
+    flex-direction: column;
+    gap: var(--espacamento-sm);
+    text-align: center;
+  }
+}
+
+/* Animações específicas da página inicial */
+.inicio .secao {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.inicio .secao:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.inicio .secao:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.inicio .secao:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.inicio .secao:nth-child(5) {
+  animation-delay: 0.8s;
+}

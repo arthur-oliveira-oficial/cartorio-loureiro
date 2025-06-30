@@ -1,0 +1,75 @@
+/* Variáveis de cores do Cartório Loureiro */
+:root {
+  /* Cores principais */
+  --cor-fundo-principal: #000000;
+  --cor-texto-principal: #fdebc9;
+  --cor-texto-secundario: #d8d3cc;
+  --cor-botao: #e3a936;
+  --cor-icones: #fdebc9;
+  --cor-links: #f0f0f0;
+  --cor-borda-botao: #ffffff;
+
+  /* Variações de cor */
+  --cor-botao-hover: #d49826;
+  --cor-botao-active: #c18716;
+  --cor-fundo-card: #1a1a1a;
+  --cor-borda-card: #333333;
+  --cor-fundo-input: #2a2a2a;
+  --cor-borda-input: #555555;
+
+  /* Sombras */
+  --sombra-card: 0 4px 6px rgba(0, 0, 0, 0.5);
+  --sombra-botao: 0 2px 4px rgba(227, 169, 54, 0.3);
+
+  /* Transições */
+  --transicao-padrao: all 0.3s ease;
+
+  /* Tipografia */
+  --fonte-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --fonte-titulo: "Georgia", serif;
+
+  /* Tamanhos de fonte */
+  --tamanho-h1: 2.5rem;
+  --tamanho-h2: 2rem;
+  --tamanho-h3: 1.5rem;
+  --tamanho-h4: 1.25rem;
+  --tamanho-texto: 1rem;
+  --tamanho-texto-pequeno: 0.875rem;
+
+  /* Espaçamentos */
+  --espacamento-xs: 0.25rem;
+  --espacamento-sm: 0.5rem;
+  --espacamento-md: 1rem;
+  --espacamento-lg: 1.5rem;
+  --espacamento-xl: 2rem;
+  --espacamento-xxl: 3rem;
+
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+
+  /* Container */
+  --container-max-width: 1200px;
+  --container-padding: var(--espacamento-md);
+}
+
+/* Breakpoints para media queries */
+@media (min-width: 768px) {
+  :root {
+    --tamanho-h1: 3rem;
+    --tamanho-h2: 2.5rem;
+    --tamanho-h3: 2rem;
+    --container-padding: var(--espacamento-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --tamanho-h1: 3.5rem;
+    --tamanho-h2: 3rem;
+    --container-padding: var(--espacamento-xl);
+  }
+}

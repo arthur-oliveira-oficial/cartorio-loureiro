@@ -1,0 +1,129 @@
+/* Estilos do Layout Principal */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout__main {
+  flex: 1;
+  padding-top: 80px; /* Altura do cabeçalho fixo */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 767px) {
+  .layout__main {
+    padding-top: 70px; /* Altura reduzida para mobile */
+  }
+}
+
+/* Animações de transição entre páginas */
+.layout__main > * {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para seções de página */
+.secao {
+  padding: var(--espacamento-xl) 0;
+}
+
+.secao--primeira {
+  padding-top: var(--espacamento-xxl);
+}
+
+.secao--ultima {
+  padding-bottom: var(--espacamento-xxl);
+}
+
+.secao--destaque {
+  background: linear-gradient(
+    135deg,
+    var(--cor-fundo-principal) 0%,
+    var(--cor-fundo-card) 100%
+  );
+  position: relative;
+}
+
+.secao--destaque::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(227, 169, 54, 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+/* Títulos de seção */
+.secao__titulo {
+  text-align: center;
+  margin-bottom: var(--espacamento-xxl);
+  position: relative;
+}
+
+.secao__titulo::after {
+  content: "";
+  position: absolute;
+  bottom: -var(--espacamento-md);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--cor-botao),
+    transparent
+  );
+}
+
+.secao__subtitulo {
+  text-align: center;
+  font-size: var(--tamanho-h4);
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--espacamento-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid responsivo */
+.grid {
+  display: grid;
+  gap: var(--espacamento-xl);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid--4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Espaçamento entre seções */
+.secao + .secao {
+  border-top: 1px solid var(--cor-borda-card);
+}
