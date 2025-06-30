@@ -51,13 +51,11 @@ const Cabecalho = () => {
               className="cabecalho__logo-img"
             />
             <div className="cabecalho__logo-texto">
-              <h1 className="cabecalho__titulo">Cartório Loureiro</h1>
-              <span className="cabecalho__subtitulo">1º Ofício de Notas, Protesto e Registros</span>
             </div>
           </Link>
 
           {/* Navegação Desktop */}
-          <nav className="cabecalho__nav oculto-mobile">
+          <nav className="cabecalho__nav">
             <ul className="cabecalho__menu">
               {menuItems.map((item) => (
                 <li key={item.caminho} className="cabecalho__menu-item">
@@ -75,7 +73,7 @@ const Cabecalho = () => {
           </nav>
 
           {/* Contato rápido */}
-          <div className="cabecalho__contato oculto-mobile">
+          <div className="cabecalho__contato">
             <a href="tel:+5595362430500" className="cabecalho__telefone">
               <FiPhone size={18} />
               <span>(95) 3624-3050</span>

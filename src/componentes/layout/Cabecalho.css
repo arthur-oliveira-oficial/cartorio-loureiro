@@ -65,7 +65,6 @@
 
 /* Navegação Desktop */
 .cabecalho__nav {
-  flex: 1;
   display: flex;
   justify-content: center;
   margin: 0 var(--espacamento-xl);
@@ -76,21 +75,24 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: var(--espacamento-lg);
+  gap: var(--espacamento-sm); /* Ajuste para evitar quebra de linha em telas menores de desktop */
+  flex-wrap: nowrap; /* Garante que os itens do menu não quebrem a linha */
 }
 
 .cabecalho__menu-item {
   position: relative;
+  white-space: nowrap; /* Previne quebra de linha nos itens do menu */
 }
 
 .cabecalho__menu-link {
   display: block;
-  padding: var(--espacamento-sm) var(--espacamento-md);
+  padding: var(--espacamento-sm) 0.75rem;
   color: var(--cor-links);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* Ajuste para evitar quebra de linha em telas menores de desktop */
   transition: var(--transicao-padrao);
   position: relative;
+  white-space: nowrap; /* Previne quebra de linha nos links do menu */
 }
 
 .cabecalho__menu-link::after {
@@ -128,9 +130,10 @@
   gap: var(--espacamento-sm);
   color: var(--cor-botao);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* Ajuste para evitar quebra de linha em telas menores de desktop */
   text-decoration: none;
   transition: var(--transicao-padrao);
+  white-space: nowrap; /* Previne quebra de linha no telefone */
 }
 
 .cabecalho__telefone:hover {
@@ -140,7 +143,7 @@
 
 /* Menu Toggle (Mobile) */
 .cabecalho__menu-toggle {
-  display: none;
+  display: none; /* Oculto por padrão em desktop */
   background: none;
   border: none;
   color: var(--cor-texto-principal);
@@ -157,25 +160,25 @@
 
 /* Menu Mobile */
 .cabecalho__nav-mobile {
-  position: absolute;
-  top: 100%;
+  position: fixed; /* Alterado para fixed para cobrir a tela */
+  top: var(--altura-cabecalho-desktop); /* Definir no media query */
   left: 0;
   right: 0;
+  bottom: 0; /* Para cobrir a tela inteira */
   background-color: var(--cor-fundo-principal);
-  border-bottom: 1px solid var(--cor-borda-card);
-  transform: translateY(-100%);
+  border-top: 1px solid var(--cor-borda-card); /* Alterado para border-top */
+  transform: translateX(100%); /* Oculto para a direita */
   opacity: 0;
   visibility: hidden;
-  transition: var(--transicao-padrao);
-  max-height: 0;
-  overflow: hidden;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s;
+  overflow-y: auto; /* Para rolagem em telas pequenas */
+  z-index: 999; /* Abaixo do cabeçalho principal */
 }
 
 .cabecalho__nav-mobile--aberto {
-  transform: translateY(0);
+  transform: translateX(0);
   opacity: 1;
   visibility: visible;
-  max-height: 500px;
 }
 
 .cabecalho__menu-mobile {
@@ -211,14 +214,72 @@
 }
 
 /* Responsividade */
-@media (max-width: 991px) {
+@media (min-width: 992px) {
+  .cabecalho__logo {
+    gap: 0.5rem; /* Reduz o espaçamento da logo em desktop */
+  }
+
+  .cabecalho__conteudo {
+    gap: 0.5rem; /* Ajusta espaçamento entre os principais blocos para evitar quebra de linha */
+    flex-wrap: nowrap; /* Garante que o conteúdo do cabeçalho não quebre a linha */
+  }
+
+  .cabecalho__menu {
+    gap: 0.5rem; /* Reduz o espaçamento entre os itens do menu em desktop */
+  }
+
+  .cabecalho__menu-link {
+    padding: var(--espacamento-sm) 0.4rem; /* Reduz o padding horizontal dos links do menu */
+  }
+
+  .cabecalho__telefone span {
+    white-space: nowrap; /* Garante que o texto do telefone não quebre a linha */
+  }
+
+  .cabecalho__logo,
   .cabecalho__nav,
   .cabecalho__contato {
-    display: none;
+    flex-shrink: 0; /* Impede que os elementos encolham, mantendo sua largura */
+  }
+
+  .cabecalho__nav {
+    display: flex; /* Visível em desktop */
+    flex-grow: 1; /* Permite que a navegação cresça para ocupar espaço disponível */
+    justify-content: center; /* Centraliza o menu dentro da navegação */
+  }
+
+  .cabecalho__contato {
+    display: flex; /* Visível em desktop */
   }
 
   .cabecalho__menu-toggle {
-    display: block;
+    display: none; /* Oculto em desktop */
+  }
+
+  .cabecalho__nav-mobile {
+    display: none; /* Oculto em desktop */
+  }
+}
+
+@media (max-width: 991px) {
+  .cabecalho__conteudo {
+    justify-content: space-between; /* Ajuste para mobile */
+  }
+
+  .cabecalho__nav {
+    display: none; /* Oculto em mobile */
+  }
+
+  .cabecalho__contato {
+    display: none; /* Oculto em mobile */
+  }
+
+  .cabecalho__menu-toggle {
+    display: block; /* Visível em mobile */
+  }
+
+  .cabecalho__nav-mobile {
+    top: 80px; /* Altura do cabeçalho em mobile */
   }
 }
 
@@ -238,6 +299,10 @@
 
   .cabecalho__subtitulo {
     font-size: 0.7rem;
+  }
+
+  .cabecalho__nav-mobile {
+    top: 70px; /* Altura do cabeçalho em mobile menor */
   }
 }
 
