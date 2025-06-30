@@ -251,8 +251,11 @@
 }
 
 .service-card__link:hover {
-    color: var(--cor-botao-hover);
-    text-decoration: underline;
+    color: var(--cor-fundo-principal); /* Garante que o texto seja visível no hover */
+    background-color: var(--cor-botao); /* Adiciona um fundo ao botão no hover */
+    text-decoration: none; /* Remove o sublinhado para um visual mais limpo */
+    border-radius: var(--borda-arredondada); /* Adiciona borda arredondada */
+    padding: var(--espacamento-sm) var(--espacamento-md); /* Adiciona padding para o fundo */
 }
 
 /* Observações Importantes */
