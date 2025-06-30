@@ -128,56 +128,54 @@ const ServicosOnline = () => {
   ];
 
   return (
-    <div className="servicos-online">
+    <div className="servicos-online-page">
       <HeroSection
         titulo="Serviços Online"
         subtitulo="Acesse certidões e documentos oficiais pela internet"
         descricao="Através das plataformas digitais oficiais, você pode solicitar diversos tipos de certidões e documentos com segurança e praticidade."
       />
 
-      {/* Benefícios */}
-      <section className="secao secao--primeira">
+      <section className="section section--benefits">
         <div className="container">
-          <h2 className="secao__titulo">Vantagens dos Serviços Online</h2>
-          <div className="grid grid--3">
+          <h2 className="section__title">Vantagens dos Serviços Online</h2>
+          <div className="benefits-grid">
             {beneficios.map((beneficio, index) => (
-              <div key={index} className="card beneficio-card">
-                <div className="beneficio-card__icone">
+              <div key={index} className="benefit-card">
+                <div className="benefit-card__icon">
                   <beneficio.icone size={32} />
                 </div>
-                <h3 className="beneficio-card__titulo">{beneficio.titulo}</h3>
-                <p className="beneficio-card__descricao">{beneficio.descricao}</p>
+                <h3 className="benefit-card__title">{beneficio.titulo}</h3>
+                <p className="benefit-card__description">{beneficio.descricao}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Serviços por Categoria */}
-      <section className="secao">
+      <section className="section section--categories">
         <div className="container">
-          <h2 className="secao__titulo">Plataformas Disponíveis</h2>
-          <div className="servicos-categorias">
+          <h2 className="section__title">Plataformas Disponíveis</h2>
+          <div className="service-categories">
             {servicosOnline.map((categoria, index) => (
-              <div key={index} className="categoria-section">
-                <div className="categoria-header">
-                  <h3 className="categoria-titulo">{categoria.categoria}</h3>
-                  <p className="categoria-descricao">{categoria.descricao}</p>
+              <div key={index} className="category-section">
+                <div className="category-header">
+                  <h3 className="category-title">{categoria.categoria}</h3>
+                  <p className="category-description">{categoria.descricao}</p>
                 </div>
 
-                <div className="servicos-grid">
+                <div className="services-grid">
                   {categoria.servicos.map((servico, servicoIndex) => (
-                    <div key={servicoIndex} className="card servico-online-card">
-                      <div className="servico-online-card__header">
-                        <span className="servico-online-card__icone">
+                    <div key={servicoIndex} className="service-card">
+                      <div className="service-card__header">
+                        <span className="service-card__icon">
                           {servico.icone}
                         </span>
-                        <h4 className="servico-online-card__titulo">
+                        <h4 className="service-card__title">
                           {servico.nome}
                         </h4>
                       </div>
 
-                      <p className="servico-online-card__descricao">
+                      <p className="service-card__description">
                         {servico.descricao}
                       </p>
 
@@ -185,10 +183,11 @@ const ServicosOnline = () => {
                         href={servico.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="botao servico-online-card__link"
+                        className="button service-card__link"
+                        aria-label={`Acessar serviço externo: ${servico.nome}`}
                       >
                         Acessar Serviço
-                        <FiExternalLink size={16} />
+                        <FiExternalLink size={16} style={{ marginLeft: 4 }} />
                       </a>
                     </div>
                   ))}
@@ -199,14 +198,13 @@ const ServicosOnline = () => {
         </div>
       </section>
 
-      {/* Observações Importantes */}
-      <section className="secao secao--destaque">
+      <section className="section section--important-notes">
         <div className="container">
-          <div className="card observacoes-card">
+          <div className="notes-card">
             <h2>Observações Importantes</h2>
-            <div className="observacoes-lista">
-              <div className="observacao-item">
-                <FiShield className="observacao-icone" />
+            <div className="notes-list">
+              <div className="note-item">
+                <FiShield className="note-icon" size={24} />
                 <div>
                   <h4>Segurança</h4>
                   <p>
@@ -216,8 +214,8 @@ const ServicosOnline = () => {
                 </div>
               </div>
 
-              <div className="observacao-item">
-                <FiClock className="observacao-icone" />
+              <div className="note-item">
+                <FiClock className="note-icon" size={24} />
                 <div>
                   <h4>Prazo de Entrega</h4>
                   <p>
@@ -227,8 +225,8 @@ const ServicosOnline = () => {
                 </div>
               </div>
 
-              <div className="observacao-item">
-                <FiCheckCircle className="observacao-icone" />
+              <div className="note-item">
+                <FiCheckCircle className="note-icon" size={24} />
                 <div>
                   <h4>Dúvidas</h4>
                   <p>
@@ -242,18 +240,17 @@ const ServicosOnline = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="secao">
+      <section className="section section--cta">
         <div className="container">
-          <div className="cta-section">
+          <div className="cta-content">
             <h2>Precisa de ajuda com algum serviço?</h2>
             <p>
               Nossa equipe está disponível para orientá-lo sobre qual documento
               é necessário e como solicitá-lo através das plataformas online.
             </p>
             <div className="cta-buttons">
-              <a href="/contato" className="botao">Entre em Contato</a>
-              <a href="/duvidas" className="botao botao-secundario">Ver Dúvidas Frequentes</a>
+              <a href="/contato" className="button" aria-label="Ir para página de contato">Entre em Contato</a>
+              <a href="/duvidas" className="button button--secondary" aria-label="Ver dúvidas frequentes">Ver Dúvidas Frequentes</a>
             </div>
           </div>
         </div>
