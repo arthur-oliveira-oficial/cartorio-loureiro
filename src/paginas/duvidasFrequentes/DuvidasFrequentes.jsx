@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp, FiHelpCircle, FiFileText, FiClock, FiDollarSign } from 'react-icons/fi';
-import HeroSection from '../componentes/ui/HeroSection';
+import HeroSection from '../../componentes/ui/HeroSection';
 import './DuvidasFrequentes.css';
 
 const DuvidasFrequentes = () => {

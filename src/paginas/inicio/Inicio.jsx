@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiFileText, FiPhone } from 'react-icons/fi';
-import HeroSection from '../componentes/ui/HeroSection';
-import ServicosSection from './inicio/ServicosSection';
-import ServicosOnlineSection from './inicio/ServicosOnlineSection';
-import InfoSection from './inicio/InfoSection';
-import NoticiasSection from './inicio/NoticiasSection';
+import HeroSection from '../../componentes/ui/HeroSection';
+import ServicosSection from './ServicosSection';
+import ServicosOnlineSection from './ServicosOnlineSection';
+import InfoSection from './InfoSection';
+import NoticiasSection from './NoticiasSection';
 import './Inicio.css'; /* Manter para estilos globais da página, se houver */
-import './inicio/ServicosSection.css';
-import './inicio/ServicosOnlineSection.css';
-import './inicio/InfoSection.css';
-import './inicio/NoticiasSection.css';
+import './ServicosSection.css';
+import './ServicosOnlineSection.css';
+import './InfoSection.css';
+import './NoticiasSection.css';
 
 const Inicio = () => {
   return (

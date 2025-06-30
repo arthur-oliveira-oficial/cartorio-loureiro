@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiAward, FiUsers, FiShield, FiClock, FiCheckCircle, FiHeart } from 'react-icons/fi';
-import HeroSection from '../componentes/ui/HeroSection';
+import HeroSection from '../../componentes/ui/HeroSection';
 import './Cartorio.css';
 
 const Cartorio = () => {

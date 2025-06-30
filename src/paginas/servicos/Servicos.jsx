@@ -11,8 +11,8 @@ import {
   FiUserCheck,
   FiClipboard
 } from 'react-icons/fi';
-import HeroSection from '../componentes/ui/HeroSection';
-import CartaoServico from '../componentes/ui/CartaoServico';
+import HeroSection from '../../componentes/ui/HeroSection';
+import CartaoServico from '../../componentes/ui/CartaoServico';
 
 const Servicos = () => {
   const servicosNotariais = [

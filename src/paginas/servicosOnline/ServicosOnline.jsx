@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiExternalLink, FiShield, FiClock, FiCheckCircle } from 'react-icons/fi';
-import HeroSection from '../componentes/ui/HeroSection';
+import HeroSection from '../../componentes/ui/HeroSection';
 import './ServicosOnline.css';
 
 const ServicosOnline = () => {

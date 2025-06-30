@@ -11,7 +11,7 @@ import {
   FiUser,
   FiMessageSquare
 } from 'react-icons/fi';
-import HeroSection from '../componentes/ui/HeroSection';
+import HeroSection from '../../componentes/ui/HeroSection';
 import './Contato.css';
 
 // Schema de validação do formulário
