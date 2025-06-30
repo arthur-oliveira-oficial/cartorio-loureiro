@@ -61,15 +61,24 @@
   :root {
     --tamanho-h1: 3rem;
     --tamanho-h2: 2.5rem;
-    --tamanho-h3: 2rem;
+    --tamanho-h3: 1.75rem;
     --container-padding: var(--espacamento-lg);
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   :root {
     --tamanho-h1: 3.5rem;
-    --tamanho-h2: 3rem;
+    --tamanho-h2: 2.75rem;
+    --tamanho-h3: 2rem;
     --container-padding: var(--espacamento-xl);
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --tamanho-h1: 4rem;
+    --tamanho-h2: 3rem;
+    --container-padding: var(--espacamento-xxl);
   }
 }
