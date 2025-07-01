@@ -194,51 +194,56 @@
 .contato-rapido {
   display: flex;
   flex-direction: column;
-  gap: var(--espacamento-md);
-  margin-bottom: var(--espacamento-lg);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contato-rapido__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
 .contato-rapido__icone {
-  color: var(--cor-texto-principal);
-  flex-shrink: 0;
-  margin-top: 0.125rem;
-  font-size: 1.1rem;
+  color: #e9b949;
+  font-size: 1.5rem;
+  grid-column: 1;
 }
 
 .contato-rapido__item div {
-  color: var(--cor-texto-principal);
-  font-size: var(--tamanho-texto-pequeno);
-  line-height: 1.4;
+  grid-column: 2;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.contato-rapido__item div {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .contato-rapido__item strong {
-  color: var(--cor-texto-principal);
+  color: #e9b949; /* Cor dourada para os títulos */
+  font-weight: 500;
+  display: inline;
+  margin-right: 0.2rem;
+  font-size: 1rem;
 }
 
 .contato-rapido__item a {
-  color: var(--cor-botao);
+  color: #ffffff;
   text-decoration: none;
   transition: var(--transicao-padrao);
 }
 
 .contato-rapido__item a:hover {
-  color: var(--cor-botao-hover);
-  text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .contato-rapido__item {
-    flex-direction: column;
-    gap: var(--espacamento-sm);
-    text-align: center;
-  }
+  color: #e9b949;
+  text-decoration: none;
 }
 
 /* Estilos para a seção de notícias */
@@ -315,4 +320,76 @@
 
 .noticia-card__link:hover::after {
   transform: translateX(4px);
+}
+
+/* Botão de Contato */
+.botao-contato {
+  width: 100%;
+  justify-content: center;
+  background-color: #e9b949;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 0;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(233, 185, 73, 0.3);
+}
+
+.botao-contato:hover {
+  background-color: #f0c056;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(233, 185, 73, 0.4);
+}
+
+/* Estilos específicos para o card de contato */
+.card.info-card:has(.contato-rapido),
+.card.info-card.card-contato {
+  background-color: #121212;
+  border-color: #242424;
+  color: #ffffff;
+  padding: var(--espacamento-lg);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card.info-card:has(.contato-rapido) .info-card__titulo,
+.card.info-card.card-contato .info-card__titulo {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Responsividade para o contato rápido */
+@media (max-width: 768px) {
+  .contato-rapido__item div {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  .card.info-card:has(.contato-rapido) .info-card__titulo,
+  .card.info-card.card-contato .info-card__titulo {
+    font-size: 1.3rem;
+  }
+
+  .contato-rapido {
+    max-width: 100%;
+    gap: 1.2rem;
+  }
+
+  .contato-rapido__icone {
+    font-size: 1.3rem;
+  }
+
+  .contato-rapido__item {
+    grid-template-columns: 2rem 1fr;
+  }
 }

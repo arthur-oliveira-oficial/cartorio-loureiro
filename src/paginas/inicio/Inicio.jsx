@@ -234,7 +234,7 @@ const Inicio = () => {
             </div>
 
             {/* Card 2: Contato e Localização */}
-            <div className="card info-card">
+            <div className="card info-card card-contato">
               <h3 className="info-card__titulo">Contato e Localização</h3>
 
               <div className="contato-rapido">
@@ -242,9 +242,7 @@ const Inicio = () => {
                 <div className="contato-rapido__item">
                   <FiMapPin className="contato-rapido__icone" />
                   <div>
-                    <strong>Endereço:</strong><br />
-                    Av. Ville Roy, 5636 - Centro<br />
-                    Boa Vista - RR, CEP 69301-000
+                    <strong>Endereço:</strong> Av. Ville Roy, 5636 - Centro Boa Vista - RR, CEP 69301-000
                   </div>
                 </div>
 
@@ -252,8 +250,7 @@ const Inicio = () => {
                 <div className="contato-rapido__item">
                   <FiPhone className="contato-rapido__icone" />
                   <div>
-                    <strong>Telefone:</strong><br />
-                    <a href="tel:+5595362430500">(95) 3624-3050</a>
+                    <strong>Telefone:</strong> <a href="tel:+5595362430500">(95) 3624-3050</a>
                   </div>
                 </div>
 
@@ -261,10 +258,7 @@ const Inicio = () => {
                 <div className="contato-rapido__item">
                   <FiMail className="contato-rapido__icone" />
                   <div>
-                    <strong>E-mail:</strong><br />
-                    <a href="mailto:atendimento@cartorioloureiro.com.br">
-                      atendimento@cartorioloureiro.com.br
-                    </a>
+                    <strong>E-mail:</strong> <a href="mailto:atendimento@cartorioloureiro.com.br">atendimento@cartorioloureiro.com.br</a>
                   </div>
                 </div>
 
@@ -272,13 +266,12 @@ const Inicio = () => {
                 <div className="contato-rapido__item">
                   <FiClock className="contato-rapido__icone" />
                   <div>
-                    <strong>Horário de Funcionamento:</strong><br />
-                    Segunda a Sexta-feira das 8h às 16h
+                    <strong>Horário de Funcionamento:</strong> Segunda a Sexta-feira das 8h às 16h
                   </div>
                 </div>
               </div>
 
-              <Link to="/contato" className="botao">
+              <Link to="/contato" className="botao botao-contato">
                 <FiMail size={18} />
                 Enviar Mensagem
               </Link>
