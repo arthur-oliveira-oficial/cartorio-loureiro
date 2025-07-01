@@ -194,26 +194,27 @@
 .contato-rapido {
   display: flex;
   flex-direction: column;
-  gap: var(--espacamento-lg);
+  gap: var(--espacamento-md);
   margin-bottom: var(--espacamento-lg);
 }
 
 .contato-rapido__item {
   display: flex;
   align-items: flex-start;
-  gap: var(--espacamento-md);
+  gap: 0.5rem;
 }
 
 .contato-rapido__icone {
-  color: var(--cor-texto-principal); /* Alterado para a cor do texto principal */
+  color: var(--cor-texto-principal);
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 0.125rem;
+  font-size: 1.1rem;
 }
 
 .contato-rapido__item div {
-  color: var(--cor-texto-principal); /* Alterado para a cor do texto principal */
+  color: var(--cor-texto-principal);
   font-size: var(--tamanho-texto-pequeno);
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .contato-rapido__item strong {

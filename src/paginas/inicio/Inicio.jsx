@@ -1,10 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiFileText, FiPhone, FiMail, FiMapPin, FiClock, FiExternalLink, FiUsers, FiShield, FiHome, FiTrendingUp, FiCheckCircle } from 'react-icons/fi';
+import {
+  FiFileText,
+  FiPhone,
+  FiMail,
+  FiMapPin,
+  FiClock,
+  FiExternalLink,
+  FiUsers,
+  FiShield,
+  FiHome,
+  FiTrendingUp,
+  FiCheckCircle
+} from 'react-icons/fi';
 import HeroSection from '../../componentes/ui/HeroSection';
 import CartaoServico from '../../componentes/ui/CartaoServico';
 import './Inicio.css';
 
+// Dados das notícias em destaque
 const noticias = [
   {
     titulo: "Nova Tabela de Emolumentos 2024",
@@ -26,6 +39,7 @@ const noticias = [
   }
 ];
 
+// Links para serviços online externos
 const servicosOnline = [
   { nome: "Certidão de Registro de Imóveis", url: "https://www.registrodeimoveis.org.br/" },
   { nome: "Certidão de Registro Civil", url: "https://www.registrocivil.org.br/" },
@@ -33,6 +47,7 @@ const servicosOnline = [
   { nome: "Consulta Protesto", url: "https://site.cenprotnacional.org.br/" }
 ];
 
+// Configuração dos principais serviços oferecidos
 const servicos = [
   {
     icone: FiFileText,
@@ -112,6 +127,7 @@ const servicos = [
 const Inicio = () => {
   return (
     <div className="inicio">
+      {/* Seção Hero - Banner principal */}
       <HeroSection
         titulo="Cartório Loureiro"
         subtitulo="1º Ofício de Notas, Protesto e Registros de Boa Vista/RR"
@@ -129,7 +145,7 @@ const Inicio = () => {
         gradiente={true}
       />
 
-      {/* Seção de Serviços */}
+      {/* Seção de Serviços Principais */}
       <section className="secao secao--primeira">
         <div className="container">
           <h2 className="secao__titulo">Nossos Serviços</h2>
@@ -184,7 +200,7 @@ const Inicio = () => {
         </div>
       </section>
 
-      {/* Seção de Informações (Sobre e Contato) */}
+      {/* Seção de Informações Institucionais */}
       <section className="secao">
         <div className="container">
           <h2 className="secao__titulo">Sobre e Contato</h2>
@@ -192,40 +208,47 @@ const Inicio = () => {
             Informações essenciais sobre o Cartório Loureiro e como nos contatar
           </p>
           <div className="grid grid--2">
-            {/* Sobre o Cartório */}
+            {/* Card 1: Sobre o Cartório Loureiro */}
             <div className="card info-card info-card--destaque">
               <h3 className="info-card__titulo">Sobre o Cartório Loureiro</h3>
+
               <p className="info-card__texto">
-                Com mais de três décadas de tradição em Boa Vista/RR, o Cartório Loureiro
-                é reconhecido pela excelência na prestação de serviços notariais e de registro.
-                Nossa equipe especializada garante segurança jurídica e agilidade em todos os procedimentos.
+                Com mais de três décadas de tradição em Boa Vista/RR, o Cartório Loureiro é
+                reconhecido pela excelência na prestação de serviços notariais e de registro.
+                Nossa equipe especializada garante segurança jurídica e agilidade em todos os
+                procedimentos.
               </p>
+
               <div className="info-card__dados">
                 <div className="info-card__dado">
-                  <strong>CNPJ:</strong> 24.383.786/0001-13
+                  <strong>CNPJ</strong> 24.383.786/0001-13
                 </div>
                 <div className="info-card__dado">
-                  <strong>CNS:</strong> 15.834-5
+                  <strong>CNS</strong> 15.834-5
                 </div>
               </div>
+
               <Link to="/cartorio" className="botao botao-secundario">
                 Conheça Nossa História
               </Link>
             </div>
 
-            {/* Contato Rápido */}
+            {/* Card 2: Contato e Localização */}
             <div className="card info-card">
               <h3 className="info-card__titulo">Contato e Localização</h3>
+
               <div className="contato-rapido">
+                {/* Endereço */}
                 <div className="contato-rapido__item">
                   <FiMapPin className="contato-rapido__icone" />
                   <div>
                     <strong>Endereço:</strong><br />
                     Av. Ville Roy, 5636 - Centro<br />
-                    Boa Vista - RR, 69301-000
+                    Boa Vista - RR, CEP 69301-000
                   </div>
                 </div>
 
+                {/* Telefone */}
                 <div className="contato-rapido__item">
                   <FiPhone className="contato-rapido__icone" />
                   <div>
@@ -234,6 +257,7 @@ const Inicio = () => {
                   </div>
                 </div>
 
+                {/* E-mail */}
                 <div className="contato-rapido__item">
                   <FiMail className="contato-rapido__icone" />
                   <div>
@@ -244,14 +268,16 @@ const Inicio = () => {
                   </div>
                 </div>
 
+                {/* Horário de Funcionamento */}
                 <div className="contato-rapido__item">
                   <FiClock className="contato-rapido__icone" />
                   <div>
-                    <strong>Horário:</strong><br />
-                    Segunda a Sexta, das 8h às 16h
+                    <strong>Horário de Funcionamento:</strong><br />
+                    Segunda a Sexta-feira das 8h às 16h
                   </div>
                 </div>
               </div>
+
               <Link to="/contato" className="botao">
                 <FiMail size={18} />
                 Enviar Mensagem
@@ -261,7 +287,7 @@ const Inicio = () => {
         </div>
       </section>
 
-      {/* Seção de Notícias */}
+      {/* Seção de Notícias e Avisos */}
       <section className="secao">
         <div className="container">
           <h2 className="secao__titulo">Notícias e Avisos</h2>
