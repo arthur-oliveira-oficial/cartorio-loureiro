@@ -221,10 +221,10 @@ const Inicio = () => {
 
               <div className="info-card__dados">
                 <div className="info-card__dado">
-                  <strong>CNPJ</strong> 24.383.786/0001-13
+                  <strong>CNPJ:</strong> 24.383.786/0001-13
                 </div>
                 <div className="info-card__dado">
-                  <strong>CNS</strong> 15.834-5
+                  <strong>CNS:</strong> 15.834-5
                 </div>
               </div>
 
