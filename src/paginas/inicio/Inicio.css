@@ -106,23 +106,65 @@
 
 /* Cards de Informação */
 .info-card {
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda-card);
+  border-radius: 16px;
+  padding: var(--espacamento-xl);
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: var(--espacamento-lg);
+  transition: var(--transicao-padrao);
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cor-botao), var(--cor-botao-hover));
+  transform: translateX(-100%);
+  transition: var(--transicao-padrao);
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  border-color: var(--cor-botao);
+}
+
+.info-card:hover::before {
+  transform: translateX(0);
+}
+.info-card--destaque {
+  background: linear-gradient(
+    135deg,
+    var(--cor-fundo-card) 0%,
+    rgba(227, 169, 54, 0.1) 100%
+  );
+  border-color: var(--cor-botao);
+}
+
+.info-card--destaque::before {
+  transform: translateX(0);
+  background: linear-gradient(90deg, var(--cor-botao), #f4c430);
 }
 
 .info-card__titulo {
-  color: var(--cor-texto-principal);
-  margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem; /* Ajustado para corresponder ao CartaoServico__titulo */
   font-weight: 600;
+  color: var(--cor-texto-principal);
+  margin: 0 0 var(--espacamento-lg) 0; /* Adicionado margin-bottom para espaçamento */
+  line-height: 1.3;
 }
 
 .info-card__texto {
   color: var(--cor-texto-secundario);
-  line-height: 1.7;
-  margin: 0;
+  line-height: 1.6;
+  margin: 0 0 var(--espacamento-lg) 0; /* Adicionado margin-bottom */
   flex: 1;
 }
 
@@ -130,10 +172,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--espacamento-sm);
-  padding: var(--espacamento-md);
-  background-color: rgba(227, 169, 54, 0.1);
+  /* padding e border-left removidos para harmonizar */
   border-radius: 8px;
-  border-left: 4px solid var(--cor-botao);
 }
 
 .info-card__dado {
@@ -143,6 +183,11 @@
 
 .info-card__dado strong {
   color: var(--cor-texto-principal);
+}
+
+.info-card .botao,
+.info-card .botao-secundario {
+  margin-top: auto; /* Empurra o botão para o final do card */
 }
 
 /* Contato Rápido */
@@ -160,13 +205,13 @@
 }
 
 .contato-rapido__icone {
-  color: var(--cor-botao);
+  color: var(--cor-texto-principal); /* Alterado para a cor do texto principal */
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .contato-rapido__item div {
-  color: var(--cor-texto-secundario);
+  color: var(--cor-texto-principal); /* Alterado para a cor do texto principal */
   font-size: var(--tamanho-texto-pequeno);
   line-height: 1.5;
 }

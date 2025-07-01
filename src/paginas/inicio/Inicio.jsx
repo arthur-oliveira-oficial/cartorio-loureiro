@@ -187,9 +187,13 @@ const Inicio = () => {
       {/* Seção de Informações (Sobre e Contato) */}
       <section className="secao">
         <div className="container">
+          <h2 className="secao__titulo">Sobre e Contato</h2>
+          <p className="secao__subtitulo">
+            Informações essenciais sobre o Cartório Loureiro e como nos contatar
+          </p>
           <div className="grid grid--2">
             {/* Sobre o Cartório */}
-            <div className="card info-card">
+            <div className="card info-card info-card--destaque">
               <h3 className="info-card__titulo">Sobre o Cartório Loureiro</h3>
               <p className="info-card__texto">
                 Com mais de três décadas de tradição em Boa Vista/RR, o Cartório Loureiro
